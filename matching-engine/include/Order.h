@@ -22,8 +22,7 @@ struct Order {
     uint32_t quantity;     // Remaining shares
     double   timestamp;    // Seconds after midnight, with fractional precision
 
-    // Intrusive doubly-linked-list pointers so each order knows its neighbours
-    // at its price level. This gives O(1) cancellation by order_id.
+    // Intrusive doubly-linked-list pointers so each order knows its neighbours at its price level. This gives O(1) cancellation by order_id.
     Order* prev = nullptr;
     Order* next = nullptr;
 
