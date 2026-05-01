@@ -1,9 +1,5 @@
-// Benchmark.h
-// -----------------------------------------------------------------------------
-// Synthetic load generator and microbenchmark. Produces orders around a
-// configurable mid-price using exponentially-distributed inter-arrival times
-// (Poisson process) and measures nanoseconds-per-operation.
-// -----------------------------------------------------------------------------
+
+// Synthetic load generator and microbenchmark. 
 
 #ifndef BENCHMARK_H
 #define BENCHMARK_H
@@ -31,4 +27,4 @@ public:
                                uint32_t seed = 42);
 };
 
-#endif // BENCHMARK_H
+#endif 
