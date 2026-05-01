@@ -1,9 +1,7 @@
-// Order.h
-// -----------------------------------------------------------------------------
+
 // Represents a single limit order resting in the book.
 // Prices are stored as int64_t in "LOBSTER integer format" (dollar price * 10000)
-// to completely avoid floating-point comparison issues in price-level bucketing.
-// -----------------------------------------------------------------------------
+
 
 #ifndef ORDER_H
 #define ORDER_H
@@ -16,13 +14,13 @@ enum class Side : int8_t {
 };
 
 struct Order {
-    uint64_t order_id;     // Unique ID assigned by the exchange
-    Side     side;         // BUY or SELL
-    int64_t  price;        // Integer price (dollars * 10000)
-    uint32_t quantity;     // Remaining shares
-    double   timestamp;    // Seconds after midnight, with fractional precision
+    uint64_t order_id;    
+    Side     side;         
+    int64_t  price;        
+    uint32_t quantity;     
+    double   timestamp;   
 
-    // Intrusive doubly-linked-list pointers so each order knows its neighbours at its price level. This gives O(1) cancellation by order_id.
+    //  doubly-linked-list pointers so each order knows its neighbours at its price level.
     Order* prev = nullptr;
     Order* next = nullptr;
 
