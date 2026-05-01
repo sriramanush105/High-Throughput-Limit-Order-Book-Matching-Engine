@@ -1,10 +1,7 @@
-// main.cpp
-// -----------------------------------------------------------------------------
-// Entry point. Supports two modes:
+//  Supports two modes:
 //   ./matching_engine replay  <csv>  [max_rows]
 //   ./matching_engine bench   [num_ops]
-// With no arguments, prints usage and runs a tiny built-in demo.
-// -----------------------------------------------------------------------------
+
 
 #include "OrderBook.h"
 #include "LobsterReplay.h"
