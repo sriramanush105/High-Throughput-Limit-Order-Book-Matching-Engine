@@ -1,7 +1,4 @@
-# Makefile for the matching engine
-# Works in GitHub Codespaces' default Ubuntu image out of the box
-# (no extra tools needed beyond g++).
-# --------------------------------------------------------------
+
 
 CXX      ?= g++
 CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -Iinclude
@@ -27,7 +24,6 @@ demo: $(BIN)
 bench: $(BIN)
 	./$(BIN) bench 1000000
 
-# Replay the sample LOBSTER data. Override CSV=... if you move the file.
 CSV ?= data/MSFT_2012-06-21_34200000_57600000_message_10.csv
 replay: $(BIN)
 	./$(BIN) replay $(CSV)
